@@ -203,7 +203,7 @@ h4
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background: #f3f3f3;
+    background: #b9f4f7;
     text-align: center;
     cursor: pointer;
 }
@@ -215,4 +215,42 @@ h4
 .hobbies ul li i 
 {
     font-size: 2em;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 20px;
+        min-height: auto;
+    }
+    .top {
+        height: auto;
+        padding: 20px;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .group {
+        display: block;
+    }
+    .left_side, .right_side {
+        display: inline-block;
+        width: 50%;
+        box-sizing: border-box; /* This ensures padding does not affect the width */
+    }
+    /* Adjust padding or margins as needed */
+    .left_side {
+        padding-right: 10px;
+    }
+    .right_side {
+        padding-left: 10px;
+    }
+    .hobbies ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .hobbies li {
+        display: flex;
+        align-items: center;
+    }
 }
